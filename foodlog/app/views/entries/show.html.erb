@@ -1,0 +1,18 @@
+<%= render @entry %>
+
+<div id="entries" class='columns mt-8 is-centered'>
+<div class='column is-one-quarter'>
+<div class='card-footer' >
+        <p style='margin-right:10px;'>
+          <%= link_to "Edit this entry", edit_entry_path(@entry)%> 
+        </p>
+        <p style='margin-left:40px;'>
+          <%= link_to "Back to entries", entries_path %>
+        </p>
+</div>
+        <p style='margin-top:10px'>
+          <%= button_to "Destroy this entry", @entry, method: :delete, class:'button is-danger'%>
+        </p>
+</div>
+</div>
+  

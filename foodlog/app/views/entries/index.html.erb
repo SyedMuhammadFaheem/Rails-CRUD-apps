@@ -1,0 +1,34 @@
+<% content_for :title do %>
+  Foodlog &ndash; <%= DateTime.now.to_formatted_s(:nice_date) %>
+<% end %>
+
+<div id="entries" class='columns mt-6 is-centered'>
+  <% @entries.each do |entry| %>
+  <div class='column is-one-quarter'>
+    <div class='card'>
+      <header class='card-header'>
+        <p class='card-header-title'><%= entry.meal_type %></p>
+      </header>
+      <div class='card-content'>
+        <div class='content'>
+          <p><span class='has-text-weight-bold'><%= entry.calories %></span> calories</p>
+          <p><span class='has-text-weight-bold'><%= entry.proteins %></span> grams of protein</p>
+          <p><span class='has-text-weight-bold'><%= entry.carbohydrates %></span> grams of carbohydrates</p>
+          <p><span class='has-text-weight-bold'><%= entry.fats %></span> grams of fats</p>
+          <p class='italic'>Logged <%= time_ago_in_words(entry.created_at) %> ago</p>
+        </div>
+      </div>
+      <div class='card-footer' >
+        <p style='margin-bottom:20px;padding-left:25%'>
+          <%= link_to "Show this entry", entry , class: 'card-footer-item'%>
+        </p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
+<div class='columns is-centered mt-6'>
+  <%= link_to 'View all entries', archive_index_path , class:'button is-link is-outlined'%>
+</div>

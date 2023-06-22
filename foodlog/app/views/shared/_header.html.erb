@@ -1,0 +1,46 @@
+<section class="hero is-success is-small" style="background-color:seagreen">
+  <div class="hero-head">
+    <header class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item">
+            <%= link_to root_path,class:'navbar-item' do %>
+              <img width="30" height="25" style='margin-right:5px' src="https://img.icons8.com/quill/100/fork.png" alt="fork"/>
+              <span class='has-text-weight-bold is-size-4'>Foodlog</span>
+            <% end %>
+          </a>
+          <span class="navbar-burger" data-target="navbarMenuHeroC">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroC" class="navbar-menu">
+          <div class="navbar-end">
+            
+            <span class="navbar-item">
+              
+                <%= link_to 'Create New Entry',new_entry_path, class:'button is-success'%>
+    
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">
+        <% if content_for(:title) %>
+            <%= yield :title %>
+        <% else %>
+            Foodlog
+        <% end %>
+      </p>
+    </div>
+  </div>
+
+  
+</section>
