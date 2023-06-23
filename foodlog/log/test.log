@@ -1,0 +1,138 @@
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "entries"[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "entries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "meal_type" varchar, "calories" integer, "proteins" integer, "carbohydrates" integer, "fats" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230619204924)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2023-06-22 21:19:28.277048"], ["updated_at", "2023-06-22 21:19:28.277048"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "f585d499f413632cc9cf64fa4fbd178895a6773c"], ["created_at", "2023-06-22 21:19:28.281017"], ["updated_at", "2023-06-22 21:19:28.281017"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "entries";
+INSERT INTO "entries" ("id", "meal_type", "calories", "proteins", "carbohydrates", "fats", "created_at", "updated_at") VALUES (168772698, 'Breakfast', 350, 20, 30, 10, '2023-06-22 21:19:28.436366', '2023-06-22 21:19:28.436366');
+INSERT INTO "entries" ("id", "meal_type", "calories", "proteins", "carbohydrates", "fats", "created_at", "updated_at") VALUES (166791901, 'Lunch', 550, 40, 40, 20, '2023-06-22 21:19:28.436366', '2023-06-22 21:19:28.436366')[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+EntriesControllerTest: test_should_update_entry
+-----------------------------------------------
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+Started PATCH "/entries/168772698" for 127.0.0.1 at 2023-06-23 02:19:28 +0500
+Processing by EntriesController#update as HTML
+  Parameters: {"entry"=>{"calories"=>"350", "carbohydrates"=>"30", "fats"=>"10", "meal_type"=>"Breakfast", "proteins"=>"20"}, "id"=>"168772698"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+Redirected to http://www.example.com/entries/168772698
+Completed 302 Found in 10ms (ActiveRecord: 0.1ms | Allocations: 2740)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+EntriesControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+Started GET "/entries" for 127.0.0.1 at 2023-06-23 02:19:28 +0500
+Processing by EntriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering entries/index.html.erb within layouts/application
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE (created_at >= '2023-06-23')[0m
+  Rendered entries/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 960)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 415)
+  Rendered layout layouts/application.html.erb (Duration: 376.7ms | Allocations: 90365)
+Completed 200 OK in 389ms (Views: 380.9ms | ActiveRecord: 0.1ms | Allocations: 93046)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+EntriesControllerTest: test_should_create_entry
+-----------------------------------------------
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+  [1m[36mEntry Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "entries"[0m
+Started POST "/entries" for 127.0.0.1 at 2023-06-23 02:19:29 +0500
+Processing by EntriesController#create as HTML
+  Parameters: {"entry"=>{"calories"=>"350", "carbohydrates"=>"30", "fats"=>"10", "meal_type"=>"Breakfast", "proteins"=>"20"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEntry Create (0.7ms)[0m  [1m[32mINSERT INTO "entries" ("meal_type", "calories", "proteins", "carbohydrates", "fats", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["meal_type", "Breakfast"], ["calories", 350], ["proteins", 20], ["carbohydrates", 30], ["fats", 10], ["created_at", "2023-06-22 21:19:29.101855"], ["updated_at", "2023-06-22 21:19:29.101855"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/entries/168772699
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms | Allocations: 845)
+  [1m[36mEntry Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "entries"[0m
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" ORDER BY "entries"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+EntriesControllerTest: test_should_destroy_entry
+------------------------------------------------
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+  [1m[36mEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "entries"[0m
+Started DELETE "/entries/168772698" for 127.0.0.1 at 2023-06-23 02:19:29 +0500
+Processing by EntriesController#destroy as HTML
+  Parameters: {"id"=>"168772698"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEntry Destroy (0.5ms)[0m  [1m[31mDELETE FROM "entries" WHERE "entries"."id" = ?[0m  [["id", 168772698]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/entries
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms | Allocations: 617)
+  [1m[36mEntry Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "entries"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+EntriesControllerTest: test_should_show_entry
+---------------------------------------------
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+Started GET "/entries/168772698" for 127.0.0.1 at 2023-06-23 02:19:29 +0500
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"168772698"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering entries/show.html.erb within layouts/application
+  Rendered entries/_entry.html.erb (Duration: 1.9ms | Allocations: 633)
+  Rendered entries/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1434)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2946)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 3336)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+EntriesControllerTest: test_should_get_new
+------------------------------------------
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+Started GET "/entries/new" for 127.0.0.1 at 2023-06-23 02:19:29 +0500
+Processing by EntriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering entries/new.html.erb within layouts/application
+  Rendered entries/_form.html.erb (Duration: 8.8ms | Allocations: 2872)
+  Rendered entries/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3169)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 4686)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 4960)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+EntriesControllerTest: test_should_get_edit
+-------------------------------------------
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+Started GET "/entries/168772698/edit" for 127.0.0.1 at 2023-06-23 02:19:29 +0500
+Processing by EntriesController#edit as HTML
+  Parameters: {"id"=>"168772698"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 168772698], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering entries/edit.html.erb within layouts/application
+  Rendered entries/_form.html.erb (Duration: 3.9ms | Allocations: 1606)
+  Rendered entries/edit.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1898)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3407)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 3770)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
