@@ -3388,3 +3388,953 @@ Processing by EmployeesController#index as HTML
 Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 3959)
 
 
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 21:38:31 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 10208)
+  Rendered shared/_header.html.erb (Duration: 1.2ms | Allocations: 512)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 127.6ms | Allocations: 48979)
+Completed 200 OK in 141ms (Views: 130.2ms | ActiveRecord: 0.6ms | Allocations: 53778)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 23:29:04 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 5693)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 5782)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms | Allocations: 7433)
+
+
+  
+ActionView::Template::Error (undefined method `show_employee_path' for #<ActionView::Base:0x0000000000f3c0>):
+    23:                     <td><%= employee.personal_email %></td>
+    24:                     <td><%= employee.address %></td>
+    25:                     <td><%= link_to 'Edit', edit_employee_path(employee), class: 'btn btn-primary' %></td>
+    26:                     <td><%= link_to 'Show', show_employee_path(employee), class: 'btn btn-primary' %></td>
+    27:                 </tr>
+    28:             <%end%>
+    29:         </tbody>
+  
+app/views/employees/index.html.erb:26
+app/views/employees/index.html.erb:20
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 23:32:31 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1595)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 15726)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.1ms | Allocations: 16568)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:32:32 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 135)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 243)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3014)
+Completed 200 OK in 22ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 11125)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:33:00 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 137)
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 517)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3894)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 5190)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:33:03 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 243)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2880)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3621)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:33:20 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 138)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 514)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3828)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 5127)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:33:23 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 243)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2877)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3619)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:41:35 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 207)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 514)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3909)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 5377)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:41:55 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 253)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 514)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3982)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 5278)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:42:36 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 277)
+  Rendered shared/_header.html.erb (Duration: 0.9ms | Allocations: 514)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3986)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 5282)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:44:11 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 428)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 514)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4148)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 5444)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:45:02 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 416)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 514)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4154)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.1ms | Allocations: 5450)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:46:49 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1378)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1467)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2744)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class='col lg-10'>
+    <div class='card rounded-0 mt-5 mb-5'>
+        <div class='card-body'>
+            <h2 class='text-center'>Showing Employee Details</h2>
+            <div class='row mt-5'>
+                <div class='col-lg-6'>
+                    <h3 class='mb-3'>Personal Information</h3>
+                    <p class='lead'><strong>First Name: </strong><%= @employee.first_name%></p>
+                    <p class='lead'><strong>Middle Name: </strong><%= if @employee.middle_name @employee.middle_name%></p>
+                    <p class='lead'><strong>Last Name: </strong><%= @employee.last_name%></p>
+                    <p class='lead'><strong>Personal Email: </strong><%= @employee.personal_email%></p>
+                </div>
+                <div class='col-lg-6'>
+                    <h3 class='mb-3'>Address Information</h3>
+                    <p class='lead'><strong>Address Line 1: </strong><%= @employee.address_line_1%></p>
+                    <p class='lead'><strong>Address Line 2: </strong><%= @employee.address_line_2%></p>
+                    <p class='lead'><strong>City: </strong><%= @employee.city%></p>
+                    <p class='lead'><strong>State: </strong><%= @employee.state%></p>
+                    <p class='lead'><strong>Country: </strong><%= @employee.country%></p>
+                    <p class='lead'><strong>Pincode: </strong><%= @employee.pincode%></p>
+                </div>
+                <%= link_to 'Back to Employees', employees_path, class:'btn btn-primary'%>
+            </div>
+        </div>
+    </div>
+
+</div>
+):
+1:    <div class='col lg-10'>
+2:        <div class='card rounded-0 mt-5 mb-5'>
+3:            <div class='card-body'>
+4:                <h2 class='text-center'>Showing Employee Details</h2>
+5:                <div class='row mt-5'>
+6:                    <div class='col-lg-6'>
+7:                        <h3 class='mb-3'>Personal Information</h3>
+8:                        <p class='lead'><strong>First Name: </strong><%= @employee.first_name%></p>
+9:                        <p class='lead'><strong>Middle Name: </strong><%= if @employee.middle_name @employee.middle_name%></p>
+10:                        <p class='lead'><strong>Last Name: </strong><%= @employee.last_name%></p>
+11:                        <p class='lead'><strong>Personal Email: </strong><%= @employee.personal_email%></p>
+12:                    </div>
+13:                    <div class='col-lg-6'>
+14:                        <h3 class='mb-3'>Address Information</h3>
+15:                        <p class='lead'><strong>Address Line 1: </strong><%= @employee.address_line_1%></p>
+16:                        <p class='lead'><strong>Address Line 2: </strong><%= @employee.address_line_2%></p>
+17:                        <p class='lead'><strong>City: </strong><%= @employee.city%></p>
+18:                        <p class='lead'><strong>State: </strong><%= @employee.state%></p>
+19:                        <p class='lead'><strong>Country: </strong><%= @employee.country%></p>
+20:                        <p class='lead'><strong>Pincode: </strong><%= @employee.pincode%></p>
+21:                    </div>
+22:                    <%= link_to 'Back to Employees', employees_path, class:'btn btn-primary'%>
+23:                </div>
+24:            </div>
+25:        </div>
+26:    
+27:    </div>
+  
+app/views/employees/show.html.erb:9: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/employees/show.html.erb:29: syntax error, unexpected end-of-input
+app/views/employees/show.html.erb:9: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/employees/show.html.erb:29: syntax error, unexpected end-of-input
+app/views/employees/show.html.erb:9: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/employees/show.html.erb:29: syntax error, unexpected end-of-input
+app/views/employees/show.html.erb:9: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/employees/show.html.erb:29: syntax error, unexpected end-of-input
+app/views/employees/show.html.erb:9: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/employees/show.html.erb:29: syntax error, unexpected end-of-input
+app/views/employees/show.html.erb:9: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/employees/show.html.erb:29: syntax error, unexpected end-of-input
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:47:20 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 504)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4240)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 5535)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:47:50 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 513)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4203)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 5511)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:48:23 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1474)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1562)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 2836)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `employee' for #<ActionView::Base:0x000000000107c0>):
+    21:                 </div>
+    22:                 <div class='col-lg-4'>
+    23:                     <%= link_to 'Back to Employees', employees_path, class:'btn btn-primary'%>
+    24:                     <%= link_to 'Edit Employee', edit_employee_path(employee), class:'btn btn-primary'%>
+    25:                 </div>
+    26:             </div>
+    27:         </div>
+  
+app/views/employees/show.html.erb:24
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:48:36 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1467)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1555)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 2827)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `employee' for #<ActionView::Base:0x00000000010ab8>):
+    21:                 </div>
+    22:                 <div class='col-lg-4'>
+    23:                     <%= link_to 'Back to Employees', employees_path, class:'btn btn-primary'%>
+    24:                     <%= link_to 'Edit Employee', edit_employees_path(employee), class:'btn btn-primary'%>
+    25:                 </div>
+    26:             </div>
+    27:         </div>
+  
+app/views/employees/show.html.erb:24
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:48:36 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1006)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1093)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1810)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `employee' for #<ActionView::Base:0x00000000010d88>):
+    21:                 </div>
+    22:                 <div class='col-lg-4'>
+    23:                     <%= link_to 'Back to Employees', employees_path, class:'btn btn-primary'%>
+    24:                     <%= link_to 'Edit Employee', edit_employees_path(employee), class:'btn btn-primary'%>
+    25:                 </div>
+    26:             </div>
+    27:         </div>
+  
+app/views/employees/show.html.erb:24
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:48:37 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1003)
+  Rendered layout layouts/application.html.erb (Duration: 0.6ms | Allocations: 1090)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1806)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `employee' for #<ActionView::Base:0x00000000011058>):
+    21:                 </div>
+    22:                 <div class='col-lg-4'>
+    23:                     <%= link_to 'Back to Employees', employees_path, class:'btn btn-primary'%>
+    24:                     <%= link_to 'Edit Employee', edit_employees_path(employee), class:'btn btn-primary'%>
+    25:                 </div>
+    26:             </div>
+    27:         </div>
+  
+app/views/employees/show.html.erb:24
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:48:46 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 577)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4322)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 5616)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:48:59 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 578)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4288)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 5583)
+
+
+Started GET "/employees/1/edit" for 127.0.0.1 at 2023-07-05 23:49:01 +0500
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:20:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/edit.html.erb within layouts/application
+  Rendered employees/_form.html.erb (Duration: 22.1ms | Allocations: 14344)
+  Rendered employees/edit.html.erb within layouts/application (Duration: 23.0ms | Allocations: 14618)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 233)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 17072)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.1ms | Allocations: 17869)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 23:49:04 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1619)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 4082)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 4405)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-05 23:49:06 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 116)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2996)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3735)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 23:49:07 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1242)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3705)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 3973)
+
+
+Started GET "/employees/2" for 127.0.0.1 at 2023-07-05 23:50:51 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 586)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4312)
+Completed 200 OK in 16ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 5612)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 23:50:53 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1564)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 4058)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 4383)
+
+
+Started GET "/employees/new" for 127.0.0.1 at 2023-07-05 23:50:55 +0500
+Processing by EmployeesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/_form.html.erb (Duration: 5.0ms | Allocations: 4927)
+  Rendered employees/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 5200)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 233)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 7662)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 8027)
+
+
+Started POST "/employees" for 127.0.0.1 at 2023-07-05 23:51:17 +0500
+Processing by EmployeesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "employee"=>{"first_name"=>"Sarim", "middle_name"=>"", "last_name"=>"asfd", "personal_email"=>"adfad@example.com", "address_line_1"=>"adf", "address_line_2"=>"", "city"=>"adfa", "state"=>"df", "country"=>"adf", "pincode"=>"213"}, "commit"=>"Create Employee"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."personal_email" = ? LIMIT ?[0m  [["personal_email", "adfad@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mEmployee Create (0.6ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "middle_name", "last_name", "personal_email", "city", "state", "country", "pincode", "address_line_1", "address_line_2", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Sarim"], ["middle_name", ""], ["last_name", "asfd"], ["personal_email", "adfad@example.com"], ["city", "adfa"], ["state", "df"], ["country", "adf"], ["pincode", "213"], ["address_line_1", "adf"], ["address_line_2", ""], ["created_at", "2023-07-05 18:51:17.633884"], ["updated_at", "2023-07-05 18:51:17.633884"]]
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:12:in `create'
+Redirected to http://127.0.0.1:3000/employees
+Completed 302 Found in 11ms (ActiveRecord: 3.4ms | Allocations: 4763)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 23:51:17 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1383)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3847)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.1ms | Allocations: 4118)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2023-07-05 23:51:21 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 943)
+  Rendered layout layouts/application.html.erb (Duration: 0.5ms | Allocations: 1030)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms | Allocations: 1747)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00000001148e2be0>::N):
+     6:                 <div class='col-lg-6'>
+     7:                     <h3 class='mb-3'>Personal Information</h3>
+     8:                     <p class='lead'><strong>First Name: </strong><%= @employee.first_name%></p>
+     9:                     <p class='lead'><strong>Middle Name: </strong><%=@employee.middle_name.present? ? @employee.middle_name : N/A%></p>
+    10:                     <p class='lead'><strong>Last Name: </strong><%= @employee.last_name%></p>
+    11:                     <p class='lead'><strong>Personal Email: </strong><%= @employee.personal_email%></p>
+    12:                 </div>
+  
+app/views/employees/show.html.erb:9
+Started GET "/employees/3" for 127.0.0.1 at 2023-07-05 23:51:56 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 583)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4305)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.1ms | Allocations: 5600)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2023-07-05 23:52:33 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 585)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 120)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4268)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 5564)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 23:52:35 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1697)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4160)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 4484)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2023-07-05 23:52:38 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 120)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 234)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 2994)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 3734)
+
+
+Started GET "/employees/3/edit" for 127.0.0.1 at 2023-07-05 23:52:40 +0500
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:20:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/edit.html.erb within layouts/application
+  Rendered employees/_form.html.erb (Duration: 4.9ms | Allocations: 5071)
+  Rendered employees/edit.html.erb within layouts/application (Duration: 5.8ms | Allocations: 5341)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 233)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 7795)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 8590)
+
+
+Started GET "/terms-and-conditions" for 127.0.0.1 at 2023-07-05 23:53:08 +0500
+Processing by PagesController#terms_and_conditions as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/terms_and_conditions.html.erb within layouts/application
+  Rendered shared/_dummy_text.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered shared/_home_link.html.erb (Duration: 0.4ms | Allocations: 169)
+  Rendered pages/terms_and_conditions.html.erb within layouts/application (Duration: 2.3ms | Allocations: 710)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 248)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 3690)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 4329)
+
+
+Started GET "/privacy-policy" for 127.0.0.1 at 2023-07-05 23:53:09 +0500
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered shared/_dummy_text.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_home_link.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 0.9ms | Allocations: 315)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 233)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3220)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 3535)
+
+
+Started GET "/privacy-policy" for 127.0.0.1 at 2023-07-05 23:54:48 +0500
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered shared/_dummy_text.html.erb (Duration: 0.4ms | Allocations: 150)
+  Rendered shared/_home_link.html.erb (Duration: 0.4ms | Allocations: 162)
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 2.2ms | Allocations: 692)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 490)
+  Rendered shared/_footer.html.erb (Duration: 0.9ms | Allocations: 1184)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5466)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 6262)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="card" style='
+   bottom: 0;
+   width: 100%;
+   height: 10px;
+   margin-top:50px;
+   text-align: center;'>
+  <div class="card-body">
+    <h5 class="card-title">HR-Mitra</h5>
+    <p class="card-text">Finding exceptional talents to make the workplace better!</p>
+    <%= link_to 'Home',root_path,class="btn btn-primary"%>
+  </div>
+</div>
+):
+1:    <div class="card" style='
+2:       bottom: 0;
+3:       width: 100%;
+4:       height: 10px;
+5:       margin-top:50px;
+6:       text-align: center;'>
+7:      <div class="card-body">
+8:        <h5 class="card-title">HR-Mitra</h5>
+9:        <p class="card-text">Finding exceptional talents to make the workplace better!</p>
+10:        <%= link_to 'Home',root_path,class="btn btn-primary"%>
+11:      </div>
+12:    </div>
+  
+app/views/shared/_footer.html.erb:10: syntax error, unexpected '='
+app/views/shared/_footer.html.erb:10: syntax error, unexpected '='
+app/views/shared/_footer.html.erb:10: syntax error, unexpected '='
+app/views/shared/_footer.html.erb:10: syntax error, unexpected '='
+app/views/shared/_footer.html.erb:10: syntax error, unexpected '='
+app/views/shared/_footer.html.erb:10: syntax error, unexpected '='
+app/views/layouts/application.html.erb:22
+Started GET "/privacy-policy" for 127.0.0.1 at 2023-07-05 23:55:14 +0500
+Processing by PagesController#privacy_policy as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/privacy_policy.html.erb within layouts/application
+  Rendered shared/_dummy_text.html.erb (Duration: 0.6ms | Allocations: 150)
+  Rendered shared/_home_link.html.erb (Duration: 0.5ms | Allocations: 162)
+  Rendered pages/privacy_policy.html.erb within layouts/application (Duration: 5.3ms | Allocations: 692)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 489)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4472)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 5281)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-05 23:55:19 +0500
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered shared/_links.html.erb (Duration: 0.6ms | Allocations: 320)
+  Rendered home/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 600)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 242)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3653)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 4301)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 23:55:36 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1699)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 252)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4325)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 4899)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 23:57:00 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1855)
+  Rendered shared/_header.html.erb (Duration: 1.1ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 5207)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 6036)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-05 23:57:47 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1868)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5221)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 6046)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-06 01:43:43 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:33:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 622)
+  Rendered shared/_header.html.erb (Duration: 0.8ms | Allocations: 493)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 16459)
+Completed 200 OK in 38ms (Views: 31.6ms | ActiveRecord: 0.3ms | Allocations: 22014)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-06 01:43:56 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2030)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4532)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 4859)
+
+
+Started DELETE "/employees/1" for 127.0.0.1 at 2023-07-06 01:43:59 +0500
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for EmployeesController):
+  
+actionpack (7.0.6) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.6) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.6) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.6) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/employees" for 127.0.0.1 at 2023-07-06 01:45:14 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 5155)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 252)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 18591)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.7ms | Allocations: 19866)
+
+
+Started DELETE "/employees/3" for 127.0.0.1 at 2023-07-06 01:45:17 +0500
+Processing by EmployeesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"3"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:38:in `destroy'
+  [1m[36mEmployee Destroy (0.4ms)[0m  [1m[31mDELETE FROM "employees" WHERE "employees"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/employees_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:38:in `destroy'
+Redirected to http://127.0.0.1:3000/employees
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms | Allocations: 3372)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-06 01:45:17 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1418)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3951)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 4223)
+
+
+Started GET "/employees/1" for 127.0.0.1 at 2023-07-06 01:47:45 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:48:in `set_employee'
+  Rendering layout layouts/application.html.erb
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 176)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 252)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 14017)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 0.8ms | Allocations: 19788)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-06 01:47:47 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1505)
+  Rendered shared/_header.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4006)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 4277)
+
+
+Started GET "/employees/3" for 127.0.0.1 at 2023-07-06 01:49:20 +0500
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:48:in `set_employee'
+Redirected to http://127.0.0.1:3000/employees
+Filter chain halted as :set_employee rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms | Allocations: 3584)
+
+
+Started GET "/employees" for 127.0.0.1 at 2023-07-06 01:49:20 +0500
+Processing by EmployeesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/views/employees/index.html.erb:20
+  Rendered employees/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4107)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 252)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 17543)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.1ms | Allocations: 18050)
+
+

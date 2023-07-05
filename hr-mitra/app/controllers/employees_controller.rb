@@ -1,4 +1,5 @@
 class EmployeesController < ApplicationController
+    before_action :set_employee, only:[:edit, :update, :show, :destroy]
     def index
         @employees= Employee.all
     end
@@ -17,15 +18,22 @@ class EmployeesController < ApplicationController
     end
 
     def edit
-        @employee= Employee.find(params[:id])
     end
 
     def update
-        @employee= Employee.find(params[:id]).update(employee_params)
         if @employee
             redirect_to employees_path, notice:'Employee has been updated successfully!'
         else
             render :edit
+        end
+    end
+    
+    def show
+    end
+    
+    def destroy
+        if @employee.destroy
+            redirect_to employees_path, notice:'Employee has been deleted successfully!' 
         end
     end
 
@@ -35,4 +43,10 @@ class EmployeesController < ApplicationController
         return params.require(:employee).permit!
     end
 
+
+    def set_employee
+        @employee= Employee.find(params[:id])
+    rescue ActiveRecord::RecordNotFound => error
+        redirect_to employees_path, notice:error
+    end
 end
