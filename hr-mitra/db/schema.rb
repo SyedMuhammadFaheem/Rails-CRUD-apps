@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_04_215221) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_05_231405) do
+  create_table "demos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "employees", force: :cascade do |t|
     t.string "first_name"
-    t.string "middle_name"
     t.string "last_name"
     t.string "personal_email"
     t.string "city"
@@ -24,6 +28,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_04_215221) do
     t.string "address_line_2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date_of_birth"
+    t.string "job_title"
+    t.string "date_of_joining"
+    t.string "middle_name"
   end
 
 end
